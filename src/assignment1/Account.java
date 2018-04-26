@@ -65,6 +65,8 @@ public abstract class Account {
         this.m_balance += money;
     }
     
-    public abstract void calculateInterestEarned();
+    public void calculateInterestEarned(){
+        this.m_balance *= (1 + m_interestRate);
+    }
     
 }
