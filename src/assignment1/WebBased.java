@@ -5,10 +5,21 @@
  */
 package assignment1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Cindyng
  */
-public class WebBased {
+public class WebBased extends Account{
     
+    public void transferBalance(Account account1, Account account2){
+        double transferAmount = Double.parseDouble(JOptionPane.showInputDialog("How much do you want to transfer to this account?"));
+        
+        account1.m_balance -= transferAmount;
+        account2.m_balance += transferAmount;
+        
+        JOptionPane.showMessageDialog(null, "New balance for first account is " + account1.getAccountBalance());
+        JOptionPane.showMessageDialog(null, "New balance for second account is " + account2.getAccountBalance());
+    }
 }

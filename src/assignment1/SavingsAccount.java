@@ -15,6 +15,8 @@ public class SavingsAccount extends Account{
     
     SavingsAccount(){
         this.m_interestRate = 0.001;
+        this.m_withdrawLimit = 400;
+        this.m_balance = 2300;
     }
 
     public void setWithdrawLimit(double withdrawLimit){
@@ -25,6 +27,7 @@ public class SavingsAccount extends Account{
         return m_withdrawLimit;
     }
     
+    @Override
     public void calculateInterestEarned(){
         this.m_balance *= (1 + m_interestRate);
     }

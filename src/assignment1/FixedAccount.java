@@ -21,6 +21,8 @@ public class FixedAccount extends Account{
         fixedContract = 6;
         this.m_interestRate = 0.2;
         bWithdrawBeforeContract = true;
+        this.m_balance = 3000;
+        this.m_withdrawLimit = Double.POSITIVE_INFINITY;
     }
     
     @Override

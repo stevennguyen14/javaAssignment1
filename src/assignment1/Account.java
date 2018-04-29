@@ -37,32 +37,8 @@ public abstract class Account {
         return m_accountNumber;
     }
     
-    public void withdrawMoney(double withdrawAmount){
-        //checks if the withdraw amount is below the withdraw limit
-        if(withdrawAmount < this.m_withdrawLimit){
-            //checks to see if the withdraw amount can be divided by 20 (20, 100 dollar notes)
-            if(withdrawAmount % 20 == 0){
-                this.m_withdrawLimit -= withdrawAmount;
-                this.m_balance -= withdrawAmount;
-            }
-            //checks to see if the withdraw amount can be divide by 50 (50, 100 dollar notes)
-            else if (withdrawAmount % 50 == 0){
-                this.m_withdrawLimit -= withdrawAmount;
-                this.m_balance -= withdrawAmount;
-            }
-            else
-                //else output message telling user to re-enter withdraw amount
-                JOptionPane.showMessageDialog(null, "Please enter a value that supports Australian Currency ($20, $50, $100)");
-                
-        }
-        else{
-            
-            JOptionPane.showMessageDialog(null, "You have reached your withdraw limit!");
-        }
-    }
-    
-    public void depositMoney(double money){
-        this.m_balance += money;
+    public double getAccountBalance(){
+        return m_balance;
     }
     
     public void calculateInterestEarned(){

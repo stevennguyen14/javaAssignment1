@@ -14,6 +14,7 @@ public class NetSavingsAccount extends Account{
     NetSavingsAccount(){
         this.m_withdrawLimit = 2000;
         this.m_interestRate = 0.01;
+        this.m_balance = 4000;
     }
 
     @Override
