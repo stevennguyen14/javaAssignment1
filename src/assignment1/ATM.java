@@ -65,6 +65,7 @@ public class ATM extends Account{
         JOptionPane.showMessageDialog(null, "Your balance is: " + account.m_balance);
     }
     
+    //feed the account into run atm, this will run all the other functions using the account type
     public void runATM(Account account){
         this.m_balance = account.m_balance;
         this.m_withdrawLimit = account.m_withdrawLimit;

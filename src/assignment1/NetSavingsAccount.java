@@ -5,6 +5,8 @@
  */
 package assignment1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Cindyng
@@ -19,7 +21,8 @@ public class NetSavingsAccount extends Account{
 
     @Override
     public void calculateInterestEarned() {
-        this.m_balance *= (1 + this.m_interestRate);
+        this.m_interestEarned = m_balance * (this.m_interestRate);
+        JOptionPane.showMessageDialog(null, "Interest earned is: " + m_interestEarned);
     }    
    
     

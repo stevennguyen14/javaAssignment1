@@ -6,6 +6,7 @@
 package assignment1;
 
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,9 +33,10 @@ public class FixedAccount extends Account{
         }
         
         if(bWithdrawBeforeContract == false){
-            this.m_balance *= (1 + this.m_interestRate);
-        
+            this.m_interestEarned = m_balance * (this.m_interestRate);
+            JOptionPane.showMessageDialog(null, "Interest earned is: " + m_interestEarned);
         }
+        
     }
     
     
