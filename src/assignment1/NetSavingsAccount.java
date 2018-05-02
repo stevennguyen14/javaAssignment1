@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 public class NetSavingsAccount extends Account{
     
     NetSavingsAccount(){
+        this.m_accountName = "Steven";
         this.m_withdrawLimit = 2000;
         this.m_interestRate = 0.01;
         this.m_balance = 4000;
@@ -22,6 +23,7 @@ public class NetSavingsAccount extends Account{
     @Override
     public void calculateInterestEarned() {
         this.m_interestEarned = m_balance * (this.m_interestRate);
+        this.m_balance += m_interestEarned;
         JOptionPane.showMessageDialog(null, "Interest earned is: " + m_interestEarned);
     }    
    

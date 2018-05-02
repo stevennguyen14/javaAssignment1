@@ -47,6 +47,7 @@ public abstract class Account {
     //calculate interest earned 
     public void calculateInterestEarned(){
         this.m_interestEarned *= m_interestRate;
+        this.m_balance += m_interestEarned;
         JOptionPane.showMessageDialog(null, "Interest earned is: " + m_interestEarned);
     }
     

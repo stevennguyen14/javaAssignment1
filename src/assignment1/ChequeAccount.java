@@ -12,6 +12,7 @@ package assignment1;
 public class ChequeAccount extends Account{
     
     ChequeAccount(){
+        this.m_accountName = "Steven";
         this.m_withdrawLimit = Double.POSITIVE_INFINITY;
         this.m_balance = 10000;
     }

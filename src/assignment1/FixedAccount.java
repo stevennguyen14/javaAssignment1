@@ -19,6 +19,7 @@ public class FixedAccount extends Account{
     boolean bWithdrawBeforeContract;
     
     FixedAccount(){
+        this.m_accountName= "steven";
         fixedContract = 6;
         this.m_interestRate = 0.2;
         bWithdrawBeforeContract = true;
@@ -31,9 +32,9 @@ public class FixedAccount extends Account{
         if(withdrawDate < fixedContract){
             bWithdrawBeforeContract = false;
         }
-        
         if(bWithdrawBeforeContract == false){
             this.m_interestEarned = m_balance * (this.m_interestRate);
+            this.m_balance += m_interestEarned;
             JOptionPane.showMessageDialog(null, "Interest earned is: " + m_interestEarned);
         }
         

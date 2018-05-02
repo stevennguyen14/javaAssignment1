@@ -16,6 +16,7 @@ public class SavingsAccount extends Account{
     
     //constructor 
     SavingsAccount(){
+        this.m_accountName = "Steven";
         this.m_interestRate = 0.001;
         this.m_withdrawLimit = 400;
         this.m_balance = 2300;
@@ -34,6 +35,7 @@ public class SavingsAccount extends Account{
     @Override
     public void calculateInterestEarned(){
         this.m_interestEarned = m_balance * (m_interestRate);
+        this.m_balance += m_interestEarned;
         JOptionPane.showMessageDialog(null, "Interest earned is: " + m_interestEarned);
     }
     
